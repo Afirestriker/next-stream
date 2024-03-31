@@ -101,7 +101,7 @@ const ContactForm = () => {
 
             <div className={styles.input_field}>
                 <label htmlFor="message" className={styles.label}>
-                    Message
+                    {/* Message */}
                     {/* <textarea id="message" name="message"
                            value={user.message}
                            rows={5}
