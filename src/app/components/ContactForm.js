@@ -109,7 +109,7 @@ const ContactForm = () => {
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
-                    > </textarea>
+                    />
                 </label>
             </div>
 
