@@ -102,13 +102,13 @@ const ContactForm = () => {
             <div className={styles.input_field}>
                 <label htmlFor="message" className={styles.label}>
                     Message
-                    <textarea id="message" name="message"
+                    {/* <textarea id="message" name="message"
                            value={user.message}
                            rows={5}
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
-                    ></textarea>
+                    ></textarea> */}
                 </label>
             </div>
 
