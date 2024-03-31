@@ -105,7 +105,7 @@ const ContactForm = () => {
                     <textarea id="message" name="message"
                            value={user.message}
                            rows={5}
-                           // placeholder="Enter your message"
+                           defaultValue="Enter your message"
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
