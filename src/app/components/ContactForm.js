@@ -25,6 +25,10 @@ const ContactForm = () => {
         try {
             e.preventDefault();
 
+            if (!user.userName.length && !user.email.length
+                  && !user.phone.length && !user.message.length)
+                  return;
+
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
