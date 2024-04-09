@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './globals.css'
 import { Mulish } from 'next/font/google'
 import Header from "@/app/components/Header";
@@ -11,7 +12,7 @@ const mulish = Mulish({
 });
 
 export const metadata = {
-  title: 'NextJs Netflix Website',
+  title: 'Next Stream',
   description: 'Getting an Hands-on experience on NextJS and React with MongoDB',
 }
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Analytics />
+        <SpeedInsights />
         <Footer />
       </body>
     </html>
