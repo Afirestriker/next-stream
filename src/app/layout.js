@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css'
 import { Mulish } from 'next/font/google'
 import Header from "@/app/components/Header";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={mulish.className}>
         <Header />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
