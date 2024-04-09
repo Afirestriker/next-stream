@@ -36,7 +36,7 @@ const Nav = () => {
                                 onClick={() => setOpenMenu(false)}
                                 href="/movies"
                             >
-                                Movie
+                                Movies
                             </Link>
                         </li>
                         <li className={styles.navbarItem}>
