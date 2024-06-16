@@ -13,7 +13,7 @@ const MovieCard = (show) => {
                     <Image src={imageUrl} alt={title} width={260} height={150}/>
                 </div>
                 <div className={styles.card_data}>
-                    <h2>{title.substring(0, 18)}</h2>
+                    <h2>{title.length <= 18 ? title : `${title.substring(0, 18).trim()}...`}</h2>
                     <p>{synopsis.substring(0, 80)}...</p>
                     <Link href={`movies/${id}`}>
                         <button>Read More</button>
