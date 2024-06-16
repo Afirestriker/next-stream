@@ -18,7 +18,7 @@ const FooterDynamicList = async ({ type = 'movie', limit = 5}) => {
     return (
         netflixData.map(index => {
             return (
-                <li>
+                <li key={index.jawSummary.id}>
                     <Link href={`movies/${index.jawSummary.id}`} title={index.jawSummary.title}>
                         {
                           index.jawSummary.title.length < 27
