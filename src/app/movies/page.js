@@ -1,5 +1,6 @@
 import MovieCard from "@/app/components/MovieCard";
 import styles from "@/app/styles/common.module.css";
+import ServerDown from "../components/ServerDown";
 
 const Movie = async () => {
     const url = process.env.RAPID_KEY;
@@ -18,20 +19,20 @@ const Movie = async () => {
     // console.log(data);
 
     return (
-        <>
-            <section className={styles.movieSection}>
-                <div className={styles.container}>
-                    <h1>Series and Movies</h1>
-                    <div className={styles.card_section}>
-                        {
-                            netflixShows.map(show => {
-                                return <MovieCard key={show.jawSummary.id} {...show} />
-                            })
-                        }
-                    </div>
-                </div>
-            </section>
-        </>
+        <section className={styles.movieSection}>
+            <div className={styles.container}>
+                <h1>Series and Movies</h1>
+                <div className={styles.card_section}>
+                    {
+                        netflixShows && (netflixShows.map(show => {
+                            return <MovieCard key={show.jawSummary.id} {...show} />
+                        }))
+                    }
+
+                    {!netflixShows.length && <ServerDown /> }
+                 </div>
+            </div>
+        </section>
     );
 };
 
