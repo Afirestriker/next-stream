@@ -32,14 +32,10 @@ const Footer = () => {
                         <li><a href="/about">About us</a></li>
                         <li><a href="/contact">Contact us</a></li>
                     </ul>
-                    <ul className={footerStyles.box}>
-                        <li className={footerStyles.link_name}>Movies</li>
-                        <FooterDynamicList type="movie" limit="4" />
-                    </ul>
-                    <ul className={footerStyles.box}>
-                        <li className={footerStyles.link_name}>Series</li>
-                        <FooterDynamicList type="show" limit="4" />
-                    </ul>
+
+                    <FooterDynamicList heading="Movies" type="movie" limit="4" />
+                    <FooterDynamicList heading="Shows" type="show" limit="4" />
+
                     <ul className={`${footerStyles.box} ${footerStyles['input-box']}`}>
                         <li className={footerStyles.link_name}>Subscribe</li>
                         <li><input type="text" placeholder="example@domain.com" /></li>
@@ -50,7 +46,8 @@ const Footer = () => {
             <div className={footerStyles['bottom-details']}>
                 <div className={footerStyles.bottom_text}>
                     <span className={footerStyles.copyright_text}> Copyright © {new Date().getFullYear()} &nbsp;
-                        <Link href="/">Ashish Agrawal.</Link> All rights reserved </span>
+                        <Link href="/">Ashish Agrawal.</Link> All rights reserved
+                    </span>
                     <span className={footerStyles.policy_terms}>
                         <Link href="/">Privacy policy</Link>
                         <Link href="/">Terms & condition</Link>
