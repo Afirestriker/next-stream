@@ -69,7 +69,7 @@ const ContactForm = () => {
                     Enter Your Name
                     <input type="text" id="userName" name="userName"
                            value={user.userName}
-                           placeholder="Enter Your Name"
+                           placeholder="Ash"
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
@@ -82,7 +82,7 @@ const ContactForm = () => {
                     Email
                     <input type="text" id="email" name="email"
                            value={user.email}
-                           placeholder="Enter your email"
+                           placeholder="example@domain.com"
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
@@ -95,7 +95,7 @@ const ContactForm = () => {
                     Phone Number
                     <input type="number" id="phone" name="phone"
                            value={user.phone}
-                           placeholder="Enter your phone number"
+                           placeholder="012-345-6789"
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
@@ -109,7 +109,7 @@ const ContactForm = () => {
                     <textarea id="message" name="message"
                            value={user.message}
                            rows={5}
-                           placeholder="Enter your message"
+                           placeholder="Hello..."
                            onChange={handleChange}
                            autoComplete="off"
                            required="required"
